@@ -1,0 +1,78 @@
+/* Stylish card layout for blog posts */
+body {
+  background: #f7f7f9;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.main-content {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.blog-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.blog-card {
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 2px 16px 0 rgba(0,0,0,0.08);
+  padding: 2rem 2rem 1.5rem 2rem;
+  position: relative;
+  transition: box-shadow 0.2s;
+}
+.blog-card:hover {
+  box-shadow: 0 4px 32px 0 rgba(0,0,0,0.12);
+}
+
+.blog-card .date {
+  position: absolute;
+  top: 1.5rem;
+  right: 2rem;
+  background: #e0e7ff;
+  color: #3730a3;
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 0.3rem 0.9rem;
+  border-radius: 1rem;
+  box-shadow: 0 1px 4px 0 rgba(55,48,163,0.08);
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.blog-card .date::before {
+  content: '\1F516'; /* Unicode for bookmark */
+  font-size: 1.1em;
+  margin-right: 0.3em;
+}
+
+.blog-card h2 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+  color: #22223b;
+}
+
+.blog-card p {
+  color: #444;
+  line-height: 1.7;
+  margin-bottom: 0;
+}
+
+@media (max-width: 600px) {
+  .main-content {
+    padding: 0 0.5rem;
+  }
+  .blog-card {
+    padding: 1.2rem 1rem 1rem 1rem;
+  }
+  .blog-card .date {
+    right: 1rem;
+    top: 1rem;
+  }
+}
